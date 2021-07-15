@@ -1,61 +1,61 @@
 {
-  "version": "2.0",
-  "envId": "{{env.ENV_ID}}",
-  "framework": {
-    "name": "Discuz-Q",
-    "plugins": {
-      "client": {
-        "use": "@cloudbase/framework-plugin-container",
-        "inputs": {
-          "serviceName": "discuzq",
-          "servicePath": "/",
-          "localPath": "./",
-          "uploadType": "image",
-          "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/tcb-images/dzq-tcb:3.0"
-          },
-          "containerPort": 80,
-          "customLogs": "stdout,/dev/stdout,/dev/stderr",
-          "initialDelaySeconds": 5,
-          "bumpVersion": true,
-          "envVariables": {
-            "CosBucketId": "${TcbStaticStoreBucket}",
-            "CosCdnName": "${TcbStaticStoreCdnName}",
-            "CosRegion": "${TcbStaticStoreRegion}",
-            "TCB_NOT_SHOW_CYNOS_DB": "${Outputs.discuzq.Properties.InstanceId}"
-          },
-          "volumeMounts": {
-            "/var/lib/discuz": "discuz-cfs"
-          }
-        }
-      }
-    },
-    "requirement": {
-      "addons": [{
-        "type": "CFS",
-        "name": "discuz-cfs"
-      }, {
-        "type": "CynosDB",
-        "name": "discuzq",
-        "envMap": {
-          "IP": "MysqlHost",
-          "PORT": "MysqlPort",
-          "USERNAME": "MysqlUsername",
-          "PASSWORD": "MysqlPassword"
-        }
-      }],
-      "environment": {
-        "AdminAccount": {
-          "description": "后台管理系统管理员账号",
-          "required": true,
-          "default": "admin"
+    "version": "2.0",
+    "envId": "{{env.ENV_ID}}",
+    "framework": {
+        "name": "Discuz-Q",
+        "plugins": {
+            "client": {
+                "use": "@cloudbase/framework-plugin-container",
+                "inputs": {
+                    "serviceName": "discuzq",
+                    "servicePath": "/",
+                    "localPath": "./",
+                    "uploadType": "image",
+                    "imageInfo": {
+                        "imageUrl": "ccr.ccs.tencentyun.com/discuzq/dzq-no-db:v2.3.210607"
+                    },
+                    "containerPort": 80,
+                    "customLogs": "stdout,/dev/stdout,/dev/stderr",
+                    "initialDelaySeconds": 5,
+                    "bumpVersion": true,
+                    "envVariables": {
+                        "CosBucketId": "${TcbStaticStoreBucket}",
+                        "CosCdnName": "${TcbStaticStoreCdnName}",
+                        "CosRegion": "${TcbStaticStoreRegion}",
+                        "TCB_NOT_SHOW_CYNOS_DB": "${Outputs.discuzq.Properties.InstanceId}"
+                    },
+                    "volumeMounts": {
+                        "/var/lib/discuz": "discuz-cfs"
+                    }
+                }
+            }
         },
-        "AdminPassword": {
-          "description": "后台管理系统管理员密码",
-          "required": true,
-          "default": "discuz@1234"
+        "requirement": {
+            "addons": [{
+                "type": "CFS",
+                "name": "discuz-cfs"
+            }, {
+                "type": "CynosDB",
+                "name": "discuzq",
+                "envMap": {
+                    "IP": "MysqlHost",
+                    "PORT": "MysqlPort",
+                    "USERNAME": "MysqlUsername",
+                    "PASSWORD": "MysqlPassword"
+                }
+            }],
+            "environment": {
+                "AdminAccount": {
+                    "description": "后台管理系统管理员账号",
+                    "required": true,
+                    "default": "admin"
+                },
+                "AdminPassword": {
+                    "description": "后台管理系统管理员密码",
+                    "required": true,
+                    "default": "discuz@1234"
+                }
+            }
         }
-      }
     }
-  }
 }
