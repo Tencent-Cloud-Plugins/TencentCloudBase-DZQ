@@ -1,5 +1,5 @@
 {
-  "version": "3.0",
+  "version": "2.0",
   "envId": "{{env.ENV_ID}}",
   "framework": {
     "name": "Discuz-Q",
