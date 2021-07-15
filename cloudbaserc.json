@@ -21,7 +21,8 @@
           "envVariables": {
             "CosBucketId": "${TcbStaticStoreBucket}",
             "CosCdnName": "${TcbStaticStoreCdnName}",
-            "CosRegion": "${TcbStaticStoreRegion}"
+            "CosRegion": "${TcbStaticStoreRegion}",
+            "TCB_NOT_SHOW_CYNOS_DB": "${Outputs.discuzq.Properties.InstanceId}"
           },
           "volumeMounts": {
             "/var/lib/discuz": "discuz-cfs"
