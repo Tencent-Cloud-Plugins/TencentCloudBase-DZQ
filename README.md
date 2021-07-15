@@ -7,10 +7,10 @@ Discuz! Q为免费开源产品，其自身问题不提供售后维护，您可�
 ## 一键部署
 本项目基于开源项目 [CloudBase Framework](https://github.com/Tencent/cloudbase-framework) 开发部署，支持一键云端部署
 
-持续开发请点击下面的部署按钮
+Discuz! Q V3.0版本请点击下面的部署按钮
 [![](https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg)](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https%3A%2F%2Fgithub.com%2FTencent-Cloud-Plugins%2FTencentCloudBase-DZQ&branch=master)
 
-自定义mysql版本请点击下面的按钮
+Discuz! Q V2.3版本请点击下面的按钮
 [![](https://main.qcloudimg.com/raw/67f5a389f1ac6f3b4d04c7256438e44f.svg)](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https%3A%2F%2Fgithub.com%2FTencent-Cloud-Plugins%2FTencentCloudBase-DZQ&branch=dxq-v-2.4)
 
 ## 介绍
