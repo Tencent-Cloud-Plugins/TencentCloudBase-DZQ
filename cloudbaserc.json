@@ -22,8 +22,7 @@
             "CosBucketId": "${TcbStaticStoreBucket}",
             "CosCdnName": "${TcbStaticStoreCdnName}",
             "CosRegion": "${TcbStaticStoreRegion}",
-            "TCB_NOT_SHOW_CYNOS_DB": "${Outputs.discuzq.Properties.InstanceId}",
-            "KUBERNETES_OAC_HOST": 1
+            "TCB_NOT_SHOW_CYNOS_DB": "${Outputs.discuzq.Properties.InstanceId}"
           },
           "volumeMounts": {
             "/var/lib/discuz": "discuz-cfs"
