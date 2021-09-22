@@ -12,7 +12,7 @@
           "localPath": "./",
           "uploadType": "image",
           "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/tcb-images/dzq-tcb:3.0"
+            "imageUrl": "ccr.ccs.tencentyun.com/discuzq/dzq:latest"
           },
           "containerPort": 80,
           "customLogs": "stdout,/dev/stdout,/dev/stderr",
