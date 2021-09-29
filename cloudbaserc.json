@@ -19,12 +19,6 @@
           "initialDelaySeconds": 5,
           "bumpVersion": true,
           "envVariables": {
-            "MysqlHost": "{{env.MysqlHost}}",
-            "MysqlPort": "{{env.MysqlPort}}",
-            "MysqlUsername": "{{env.MysqlUsername}}",
-            "MysqlPassword": "{{env.MysqlPassword}}",
-            "AdminAccount": "{{env.AdminAccount}}",
-            "AdminPassword": "{{env.AdminPassword}}",
             "CosBucketId": "${TcbStaticStoreBucket}",
             "CosCdnName": "${TcbStaticStoreCdnName}",
             "CosRegion": "${TcbStaticStoreRegion}",
