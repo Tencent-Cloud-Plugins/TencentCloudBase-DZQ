@@ -12,13 +12,19 @@
           "localPath": "./",
           "uploadType": "image",
           "imageInfo": {
-            "imageUrl": "ccr.ccs.tencentyun.com/discuzq/dzq-no-db:v3.0.210917"
+            "imageUrl": "ccr.ccs.tencentyun.com/discuzq/dzq-no-db:v3.0.210926"
           },
           "containerPort": 80,
           "customLogs": "stdout,/dev/stdout,/dev/stderr",
           "initialDelaySeconds": 5,
           "bumpVersion": true,
           "envVariables": {
+            "MysqlHost": "{{env.MysqlHost}}",
+            "MysqlPort": "{{env.MysqlPort}}",
+            "MysqlUsername": "{{env.MysqlUsername}}",
+            "MysqlPassword": "{{env.MysqlPassword}}",
+            "AdminAccount": "{{env.AdminAccount}}",
+            "AdminPassword": "{{env.AdminPassword}}",
             "CosBucketId": "${TcbStaticStoreBucket}",
             "CosCdnName": "${TcbStaticStoreCdnName}",
             "CosRegion": "${TcbStaticStoreRegion}",
